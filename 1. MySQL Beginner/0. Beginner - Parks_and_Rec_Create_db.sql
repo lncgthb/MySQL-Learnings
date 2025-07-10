@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS `Parks_and_Recreation`;
 CREATE DATABASE `Parks_and_Recreation`;
 USE `Parks_and_Recreation`;
 
--- create table with data types
+-- create employee_demographics table with headers and data types
 CREATE TABLE employee_demographics (
   employee_id INT NOT NULL,
   first_name VARCHAR(50),
@@ -14,7 +14,7 @@ CREATE TABLE employee_demographics (
   PRIMARY KEY (employee_id)
 );
 
--- create table with data types
+-- create employee_salary table with headers and data types
 CREATE TABLE employee_salary (
   employee_id INT NOT NULL,
   first_name VARCHAR(50) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE employee_salary (
   dept_id INT
 );
 
--- putting example data into our table
+-- putting example data into our employee_demographics table
 INSERT INTO employee_demographics (employee_id, first_name, last_name, age, gender, birth_date)
 VALUES
 (1,'Leslie', 'Knope', 44, 'Female','1979-09-25'),
@@ -39,7 +39,7 @@ VALUES
 (11, 'Mark', 'Brendanawicz', 40, 'Male', '1983-06-14'),
 (12, 'Craig', 'Middlebrooks', 37, 'Male', '1986-07-27');
 
--- putting example data into our table
+-- putting example data into our employee_salary table
 INSERT INTO employee_salary (employee_id, first_name, last_name, occupation, salary, dept_id)
 VALUES
 (1, 'Leslie', 'Knope', 'Deputy Director of Parks and Recreation', 75000,1),
@@ -55,14 +55,14 @@ VALUES
 (11, 'Mark', 'Brendanawicz', 'City Planner', 57000, 3),
 (12, 'Craig', 'Middlebrooks', 'Parks Director', 65000,1);
 
--- create table with data types
+-- create parks_departments table with headers and data types
 CREATE TABLE parks_departments (
   department_id INT NOT NULL AUTO_INCREMENT,
   department_name varchar(50) NOT NULL,
   PRIMARY KEY (department_id)
 );
 
--- putting example data into our table
+-- putting example data into our parks_departments table
 INSERT INTO parks_departments (department_name)
 VALUES
 ('Parks and Recreation'),
