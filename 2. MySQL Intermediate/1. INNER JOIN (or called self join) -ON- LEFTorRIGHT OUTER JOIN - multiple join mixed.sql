@@ -22,12 +22,12 @@ LEFT OUTER JOIN parks_and_recreation.employee_salary AS sal
 
 -- SELF JOIN a join that you tie the table to itself
 -- example to add +1 so it will not be the same line of data
-SELECT 	emp1.employee_id AS emp_santa,
-		emp1.first_name AS first_name_santa,
-        emp1.last_name AS last_name_santa,
-        emp2.employee_id AS emp_name,
-        emp2.first_name AS first_name_emp,
-        emp2.last_name AS last_name_santa
+SELECT emp1.employee_id AS emp_santa,
+	emp1.first_name AS first_name_santa,
+	emp1.last_name AS last_name_santa,
+	emp2.employee_id AS emp_name,
+	emp2.first_name AS first_name_emp,
+	emp2.last_name AS last_name_santa
 FROM parks_and_recreation.employee_salary AS emp1
 INNER JOIN parks_and_recreation.employee_salary AS emp2
 	ON emp1.employee_id + 1 = emp2.employee_id
