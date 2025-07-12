@@ -38,8 +38,8 @@ USE parks_and_recreation $$
 CREATE PROCEDURE salary_1st_employee(parameter_employee_id INT) -- parameter is same with the header
 BEGIN
 	SELECT first_name, salary
-    FROM employee_salary
-    WHERE employee_id = parameter_employee_id;
+	FROM employee_salary
+	WHERE employee_id = parameter_employee_id;
 END $$
 DELIMITER ;
 
