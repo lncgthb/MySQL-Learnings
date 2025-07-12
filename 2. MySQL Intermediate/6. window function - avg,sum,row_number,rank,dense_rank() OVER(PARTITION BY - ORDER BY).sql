@@ -30,7 +30,7 @@ JOIN employee_salary AS sal
 -- OVER(PARTITION BY gender ORDER BY dem.employee_id) 
 SELECT dem.employee_id, dem.first_name, dem.last_name, gender, salary,
 	ROW_NUMBER() OVER(PARTITION BY gender ORDER BY salary DESC) AS row_num,
-    RANK() OVER(PARTITION BY gender ORDER BY salary DESC) AS rank_num, -- considering same rank as other rank
+	RANK() OVER(PARTITION BY gender ORDER BY salary DESC) AS rank_num, -- considering same rank as other rank
 	DENSE_RANK() OVER(PARTITION BY gender ORDER BY salary DESC) AS dense_rank_num -- considering same rank as one
 FROM parks_and_recreation.employee_demographics AS dem
 JOIN employee_salary AS sal
