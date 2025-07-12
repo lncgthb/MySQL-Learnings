@@ -1,5 +1,5 @@
 -- HAVING vs WHERE
--- using HAVING after GROUP BY since it must execute first
+-- use HAVING after GROUP BY since it must execute first
 
 SELECT gender, AVG(age)
 FROM parks_and_recreation.employee_demographics
